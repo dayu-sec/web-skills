@@ -1,0 +1,4 @@
+interface:
+  display_name: "DySec 源码注释"
+  short_description: "输出源码时按契约轻重选择块级或行注释，并让注释紧邻代码"
+  default_prompt: "使用 $dy-sec-code-commenting 为输出的源码添加位置和形式合适的注释。"

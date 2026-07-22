@@ -1,0 +1,4 @@
+interface:
+  display_name: "DySec 前端数据请求"
+  short_description: "统一请求实例、OpenAPI SDK/文档接入、服务与错误边界"
+  default_prompt: "使用 $dy-sec-frontend-request 设计或评审 OpenAPI SDK 生成与接入、文档手写 Service 和请求运行时。"

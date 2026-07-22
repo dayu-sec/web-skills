@@ -1,0 +1,4 @@
+interface:
+  display_name: "DySec Ant Design UI 组件"
+  short_description: "按组件级中文资料选择 Ant Design 组件并检查应用内 UI 边界"
+  default_prompt: "使用 $dy-sec-antd-ui-components 为 Web 页面选择合适的 Ant Design 组件并检查应用内 UI 边界。"

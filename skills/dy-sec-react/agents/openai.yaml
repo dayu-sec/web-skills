@@ -1,0 +1,4 @@
+interface:
+  display_name: "DySec React"
+  short_description: "处理 React 依赖选型、组件、Hooks、状态管理与路由适配"
+  default_prompt: "使用 $dy-sec-react 选择 React 前端依赖并实现或评审组件、状态和 Router 适配。"
