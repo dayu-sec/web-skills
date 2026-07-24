@@ -1,6 +1,6 @@
 ---
 name: dy-sec-frontend-request
-description: 设计、接入、迁移或评审 Web 前端数据请求层，覆盖 `@lrd/dy-sec-bizlib-request` 的依赖与实例边界、鉴权和语言请求头、错误传播、业务 Service，以及从 OpenAPI 生成和接入 TypeScript SDK API 物料或仅依据文档手写 Service 两种模式；适用于 React、Vue、单体 Web 和微前端内部请求实现。
+description: 设计、接入、迁移或评审 Web 前端数据请求层，覆盖 `@dayu-sec/bizlib-request` 的依赖与实例边界、鉴权和语言请求头、错误传播、业务 Service，以及从 OpenAPI 生成和接入 TypeScript SDK API 物料或仅依据文档手写 Service 两种模式；适用于 React、Vue、单体 Web 和微前端内部请求实现。
 ---
 
 # DySec 前端数据请求
@@ -21,7 +21,7 @@ description: 设计、接入、迁移或评审 Web 前端数据请求层，覆�
 
 - 源码直接导入的包必须由当前消费方直接声明；类型导入同样需要可解析的直接依赖。
 - 普通传递依赖未被消费方直接导入时不重复声明；peer dependency 由消费方直接满足。
-- 团队请求能力统一从 `@lrd/dy-sec-bizlib-request` 根入口导入，不读取 `@seed-fe/request` 或构建目录的深层路径。
+- 团队请求能力统一从 `@dayu-sec/bizlib-request` 根入口导入，不读取 `@seed-fe/request` 或构建目录的深层路径。
 - 依赖版本以目标仓库、已发布包和私有源的当前可解析结果为准，不在 Skill 中写死版本。
 
 ## 引用入口

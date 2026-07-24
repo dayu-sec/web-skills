@@ -53,7 +53,7 @@ error responses：状态码、错误 schema
 ```
 
 - 只实现当前业务场景需要的 operation，不仿造完整 SDK、生成目录或第二套请求基础设施。
-- 手写 Service 使用应用已经初始化的 live `HttpRequest`；使用 `@lrd/dy-sec-bizlib-request` 的项目继续从其公开入口取得实例，保留 Base URL、鉴权、语言、拦截器和错误传播。
+- 手写 Service 使用应用已经初始化的 live `HttpRequest`；使用 `@dayu-sec/bizlib-request` 的项目继续从其公开入口取得实例，保留 Base URL、鉴权、语言、拦截器和错误传播。
 - 手写 wire DTO 严格保留 OpenAPI 字段名、必填性、枚举、nullable 和嵌套结构。页面视图模型或 Service 映射后的 `camelCase` 结构不能作为 Mock 响应契约。
 - 文档缺少响应 schema、错误结构、示例含义或版本信息时，先指出缺口；不要用 UI 字段、常见命名、历史印象或 `a || b || c` fallback 补齐。
 - 文档已经声明错误 schema 时，该 schema 优先于 `$dy-sec-rest-api` 的通用错误示例；REST Skill 用于核对语义，不覆盖当前端点已有契约。
@@ -61,7 +61,7 @@ error responses：状态码、错误 schema
 
 ## 请求层与 Mock 的职责
 
-`@lrd/dy-sec-bizlib-request` 负责应用内请求实例、Base URL、鉴权、语言、超时、拦截器、错误标准化及其所有权；业务 Service 负责调用 SDK 或按文档手写请求并执行必要映射；Mock 负责开发服务器侧的 wire-level 请求匹配和响应。
+`@dayu-sec/bizlib-request` 负责应用内请求实例、Base URL、鉴权、语言、超时、拦截器、错误标准化及其所有权；业务 Service 负责调用 SDK 或按文档手写请求并执行必要映射；Mock 负责开发服务器侧的 wire-level 请求匹配和响应。
 
 - Mock 不替换业务 Service，不在页面中拼 URL，也不创建第二个 Axios 或 `HttpRequest`。
 - SDK 模式下，业务 Service 或薄适配器把 live `HttpRequest` 适配给 SDK `HttpClient`；Mock 仍只匹配适配后发出的 HTTP 请求。

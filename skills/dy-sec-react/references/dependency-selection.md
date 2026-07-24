@@ -15,7 +15,7 @@
 | --- | --- | --- |
 | React 组件、路由和表单 | React、React Router、项目已有表单方案 | 不用全局状态替代路由或表单状态 |
 | UI、主题和图标 | Ant Design、ProComponents、主题包、`lucide-react` | 组件选型使用 `$dy-sec-antd-ui-components`，界面使用 `$dy-sec-basic-ui` |
-| 请求实例与业务 Service | `@lrd/dy-sec-bizlib-request` | 不直接使用 `axios` 发起业务请求，使用 `$dy-sec-frontend-request` |
+| 请求实例与业务 Service | `@dayu-sec/bizlib-request` | 不直接使用 `axios` 发起业务请求，使用 `$dy-sec-frontend-request` |
 | 服务端状态 | `@tanstack/react-query` | 不存入 Zustand，不使用 `ahooks/useRequest` |
 | 运行时契约校验 | `zod` | 只校验不可信边界，使用 `$dy-sec-data-contract-first` |
 | React 通用 Hooks | `ahooks` | 只处理浏览器、事件、调度和轻量状态辅助，使用 `$dy-sec-react` |

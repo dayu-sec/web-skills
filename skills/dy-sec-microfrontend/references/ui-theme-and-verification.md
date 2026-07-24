@@ -12,7 +12,7 @@
 - 每个应用根节点使用唯一、可定位的样式和主题作用域；选择器名称以目标仓库约定为准。
 - 子应用不得覆盖 `html`、`body`、宿主布局容器、其他子应用根节点或无边界的 `.ant-*` 内部结构。
 - 主题模式由明确的平台契约传递；每个应用在自己的根节点装配 Ant Design 配置和业务 CSS 变量作用域。
-- 使用 `@lrd/dy-sec-bizcom-theme` 时，同一个模式同时驱动 Ant Design Token 和 `useDySecCssVariableScope`；卸载时释放当前应用创建的受控 stylesheet。
+- 使用 `@dayu-sec/bizcom-theme` 时，同一个模式同时驱动 Ant Design Token 和 `useDySecCssVariableScope`；卸载时释放当前应用创建的受控 stylesheet。
 - CSS 变量只传递主题值，不代替运行时上下文、路由或业务状态。
 - 基础视觉语言和 Token 使用 `$dy-sec-basic-ui`；本 Skill 不复制颜色、间距和组件样式规则。
 

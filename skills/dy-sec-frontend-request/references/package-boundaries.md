@@ -10,8 +10,8 @@
 
 - 当前源码直接导入的运行时包或类型包必须在当前 `package.json` 直接声明；类型导入虽然可被擦除，仍必须在编译时稳定解析。
 - 请求包放在 `dependencies` 的底层实现由请求包负责安装。消费方未直接导入时不重复声明，也不通过包管理器的提升结果访问它。
-- peer dependency 表示消费方必须提供兼容实例。`@lrd/dy-sec-bizlib-request` 将 Axios 作为 peer dependency 时，Web 应用直接声明 `axios` 并锁定经过验证的版本。
-- 团队应用从 `@lrd/dy-sec-bizlib-request` 根入口导入公开能力。`@seed-fe/request` 属于底层实现依赖，不从消费方源码导入，也不访问任一包的 `src`、`dist` 或未导出子路径。
+- peer dependency 表示消费方必须提供兼容实例。`@dayu-sec/bizlib-request` 将 Axios 作为 peer dependency 时，Web 应用直接声明 `axios` 并锁定经过验证的版本。
+- 团队应用从 `@dayu-sec/bizlib-request` 根入口导入公开能力。`@seed-fe/request` 属于底层实现依赖，不从消费方源码导入，也不访问任一包的 `src`、`dist` 或未导出子路径。
 - 发现公开入口缺少稳定能力时，优先扩展请求包并发布向后兼容版本；只有存在明确来源、范围和退出条件时才保留消费方直连底层包的临时例外。
 
 ## 发布与消费

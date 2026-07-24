@@ -16,7 +16,7 @@
 按以下顺序确定实现：
 
 1. 当前项目的 `AGENTS.md`、主题入口、依赖版本和已有组件约定。
-2. 当前项目实际安装的 `@lrd/dy-sec-bizcom-theme` 公共导出和类型。
+2. 当前项目实际安装的 `@dayu-sec/bizcom-theme` 公共导出和类型。
 3. 本 reference 记录的通用接入模式。
 
 项目使用主题包时只依赖其公共导出，不读取内部文件。项目未安装主题包时沿用现有主题契约；只有任务范围和目标仓库允许时才建议接入依赖，不虚构同名 API，也不使用散落的硬编码值模拟主题包。
@@ -32,7 +32,7 @@ import {
   getDySecAntdTheme,
   type DySecThemeMode,
   useDySecCssVariableScope,
-} from '@lrd/dy-sec-bizcom-theme';
+} from '@dayu-sec/bizcom-theme';
 
 /** 应用主题入口的 Props。 */
 interface AppThemeProps {
@@ -123,11 +123,11 @@ export function AppTheme({ mode }: AppThemeProps) {
 
 ## Emotion 样式
 
-自研组件使用模块级样式工厂，通过 `@lrd/dy-sec-bizcom-theme/emotion` 消费稳定主题对象：
+自研组件使用模块级样式工厂，通过 `@dayu-sec/bizcom-theme/emotion` 消费稳定主题对象：
 
 ```tsx
-import { css, getDySecStyles } from '@lrd/dy-sec-bizcom-theme/emotion';
-import type { DySecTheme2 } from '@lrd/dy-sec-bizcom-theme';
+import { css, getDySecStyles } from '@dayu-sec/bizcom-theme/emotion';
+import type { DySecTheme2 } from '@dayu-sec/bizcom-theme';
 
 /** 根据稳定主题对象生成组件级 Emotion 样式。 */
 function getStyles(theme: DySecTheme2) {

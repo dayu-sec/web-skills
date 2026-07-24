@@ -20,7 +20,7 @@
 
 ### 应用消费边界
 
-- SDK、`@lrd/dy-sec-bizlib-request` 及其 peer dependency 按实际直接导入关系声明，包清单与锁文件同步更新。
+- SDK、`@dayu-sec/bizlib-request` 及其 peer dependency 按实际直接导入关系声明，包清单与锁文件同步更新。
 - 先从安装包声明确认实际签名；团队函数式 SDK 通常为 `operation(payload, options?, httpClient?)`，不要自行改成 service/client Class。
 - 先初始化并取得应用拥有的 live `HttpRequest`，再把 SDK `HttpClient.request(config)` 薄适配为 `httpRequest(config)`；不在 SDK 旁复制第二套 Axios、鉴权或错误配置。
 - 只有单一运行时所有者时才设置 SDK 全局 client。多个可独立挂载应用可能共享同一 SDK 模块、或 SDK 没有配套清理 API 时，使用单次 client 参数或应用内 Service 适配，避免全局 client 被相邻应用覆盖。
