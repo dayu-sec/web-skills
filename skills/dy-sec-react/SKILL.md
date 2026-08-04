@@ -11,7 +11,7 @@ description: 处理 React 前端代码的实现、重构与评审，覆盖依赖
 2. 识别路由适配、业务视图、公共组件、请求和状态的职责边界，再修改 React 代码。
 3. 涉及模板依赖基线、包选型、重复能力、未使用依赖或 bundle 影响时，读取 [React 前端依赖选择](references/dependency-selection.md)。
 4. 涉及通用 Hooks library 的选择、引入、迁移、使用或评审时，读取 [React Hooks library 选择与边界](references/hooks-library-boundaries.md)。
-5. 涉及文件路由入口、页面目录或业务视图目录时，同时使用 `$dy-sec-frontend-shared`；本 Skill 只处理 React Router Hooks、props/callback 和组件生命周期适配。
+5. 新建或重命名 React 组件、Hook、路由、页面、业务视图及其附属文件，或调整文件路由与视图分层时，同时使用 `$dy-sec-frontend-shared`；本 Skill 不复制框架共享的源码路径和视图分层规则。
 6. React 组件或 Hook 任务涉及数据请求时，同时使用 `$dy-sec-frontend-request`；本 Skill 不复制请求实例、错误传播或业务 Service 规则。
 7. 沿用项目已有组件库、图标库、主题、请求和状态方案；新增依赖前确认现有能力不能覆盖。
 8. 修改后运行目标单元已有的类型、Lint、格式、测试和构建命令；涉及路由时补充直接 URL、刷新和历史导航验证。
@@ -29,7 +29,7 @@ description: 处理 React 前端代码的实现、重构与评审，覆盖依赖
 
 ## 组合入口
 
-- 文件路由与业务视图分层使用 `$dy-sec-frontend-shared`，不在 React Skill 中复制团队协议。
+- 源码路径命名、文件路由与业务视图分层使用 `$dy-sec-frontend-shared`，不在 React Skill 中复制团队协议。
 - 数据请求使用 `$dy-sec-frontend-request`，不在 React Skill 中复制请求基础设施规则。
 - TypeScript 函数声明、箭头函数和可擦除语法使用 `$dy-sec-typescript`，不在 React Skill 中复制语言层规范。
 

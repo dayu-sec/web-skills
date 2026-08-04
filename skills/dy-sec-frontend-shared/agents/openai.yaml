@@ -1,4 +1,4 @@
 interface:
   display_name: "DySec 前端通用工程"
-  short_description: "处理跨框架文件路由分层、安全取值、国际化与通用工程机制"
-  default_prompt: "使用 $dy-sec-frontend-shared 设计或评审跨 React、Vue 的文件路由分层与前端共享机制。"
+  short_description: "处理跨框架源码命名、文件路由分层、安全取值与国际化"
+  default_prompt: "使用 $dy-sec-frontend-shared 设计或评审跨 React、Vue 的源码路径命名、文件路由分层与前端共享机制。"

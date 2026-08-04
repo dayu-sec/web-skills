@@ -8,6 +8,13 @@
 - 全局规则只写跨项目、跨 Skill 可复用的工作约束；单个 Skill 的领域知识放在该 Skill 的 `SKILL.md` 或 `references/` 中。
 - 处理本机全局 Skill 时，优先读取 Skill Creator 规则和目标 Skill 的现有结构，再做最小必要修改。
 
+## Agent 资料脱敏
+
+- 创建或更新共享、全局、模板级 `AGENTS.md`，以及团队 `SKILL.md`、`references/`、`agents/openai.yaml` 时，只写跨项目稳定成立的技术约束、领域方法和工作流程。
+- 不从当前项目复制项目名、仓库路径、真实页面或模块名、服务名、路由、API 路径、项目专用环境变量、数据字段、业务文案、Mock 数据、客户或人员信息、内部环境信息及实现快照。需要说明形态时使用 `<project-name>`、`<service-name>`、`<ComponentName>` 等中性占位符。
+- 项目级 `AGENTS.md` 可以记录完成协作所必需的稳定架构、技术选型、职责边界和源码入口，但不得把敏感业务内容、真实业务数据或短期实现状态当作示例；详细业务事实留在项目规格、契约和源码中。
+- 交付 Agent 资料前检查变更 diff，并定向搜索当前项目标识、业务名和敏感配置；发现不可跨项目复用的内容时，将其移回项目规格或源码，不得同步到用户级、共享仓库或脚手架模板。
+
 ## Skill 编写
 
 - 使用 Skill Creator 创建或更新 Skill，并在完成后运行 Skill Creator 校验。
@@ -32,7 +39,7 @@
 - 架构扩展层保存只在特定架构启用的能力。微前端任务使用 `$dy-sec-microfrontend`；单体 Web 任务不加载该 Skill，也不为了兼容微前端增加生命周期、通信或隔离分支。
 - 专用架构 Skill 可以要求组合使用通用 Skill；通用 Skill 只保留组合入口，不复制专用架构细节，避免两处规则分叉。
 - 一个任务同时涉及多个层级时，先确定架构边界，再按实际文件和职责加载最小 Skill 组合；不得仅因仓库中存在某种架构就让所有任务都加载其专用 Skill。
-- 文件式路由入口与业务视图分层属于框架无关的 Web 共享机制，由 `$dy-sec-frontend-shared` 统一定义；React、Vue 等框架 Skill 只补充各自的路由 API、组件通信和生命周期适配，不复制该协议。
+- 源码路径命名、文件式路由入口与业务视图分层属于框架无关的 Web 共享机制，由 `$dy-sec-frontend-shared` 统一定义；React、Vue 等框架 Skill 只补充各自的框架适配并组合使用该 Skill，不复制共享协议。
 - 前端数据请求属于独立的 Web 共享机制，由 `$dy-sec-frontend-request` 统一定义依赖边界、实例归属、初始化、错误传播和业务 Service 分层；单体与微前端内部共同使用，只有任务触及微前端生命周期、隔离或跨应用契约时才额外组合 `$dy-sec-microfrontend`。
 - 前端本地 Mock 属于独立的 Web 共享机制，由 `$dy-sec-frontend-mock` 统一定义插件扫描、目录与入口、OpenAPI SDK 或文档契约来源、场景实现和运行验证；响应契约按需组合 `$dy-sec-data-contract-first` 与 `$dy-sec-rest-api`，请求与 Service 边界组合 `$dy-sec-frontend-request`，只有触及跨应用 Mock 契约时才额外组合 `$dy-sec-microfrontend`。
 
