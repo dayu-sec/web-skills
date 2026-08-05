@@ -1,0 +1,4 @@
+interface:
+  display_name: "DayuSec Web 单体架构"
+  short_description: "规范单体 Web 应用职责、Shell 边界与运行验证"
+  default_prompt: "使用 $dayu-sec-web-monolith 按单体 Web 架构边界设计、实现或评审当前应用。"

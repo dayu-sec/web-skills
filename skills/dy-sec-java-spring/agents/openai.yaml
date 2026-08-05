@@ -1,4 +1,0 @@
-interface:
-  display_name: "DySec Java Spring"
-  short_description: "开发和评审契约清晰、可靠可测的 Spring 后端服务"
-  default_prompt: "使用 $dy-sec-java-spring 设计、实现或评审高质量 Java Spring 后端服务。"

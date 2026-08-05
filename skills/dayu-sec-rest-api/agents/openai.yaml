@@ -1,0 +1,4 @@
+interface:
+  display_name: "DayuSec REST API"
+  short_description: "统一资源、HTTP、错误、分页与 OpenAPI 契约"
+  default_prompt: "使用 $dayu-sec-rest-api 设计、实现或评审符合团队约定的 REST API。"

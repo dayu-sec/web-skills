@@ -1,0 +1,4 @@
+interface:
+  display_name: 'DayuSec Micro Frontend'
+  short_description: '处理微前端项目结构、职责、生命周期、路由、隔离与集成验证'
+  default_prompt: '使用 $dayu-sec-web-micro-frontend 识别项目结构并设计、实现或评审微前端架构边界。'

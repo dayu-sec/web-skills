@@ -1,0 +1,4 @@
+interface:
+  display_name: "DayuSec 基础 UI"
+  short_description: "规范 React 与 Ant Design 基础 UI、主题和操作型业务界面"
+  default_prompt: "使用 $dayu-sec-basic-ui 设计、实现或评审一个符合团队规范的 React 与 Ant Design 基础 UI。"

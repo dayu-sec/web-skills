@@ -1,0 +1,4 @@
+interface:
+  display_name: "DayuSec 数据契约优先"
+  short_description: "按明确契约处理数据解析、Zod 运行时校验、兼容分支和错误响应"
+  default_prompt: "使用 $dayu-sec-data-contract-first 按明确数据契约完成 Zod 校验、解析、映射和错误处理。"

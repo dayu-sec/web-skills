@@ -1,0 +1,4 @@
+interface:
+  display_name: "DayuSec TypeScript"
+  short_description: "规范 TypeScript 类型建模、边界安全、异步处理和常见反模式"
+  default_prompt: "使用 $dayu-sec-typescript 按项目约定实现或评审类型安全、边界清晰的 TypeScript 代码。"

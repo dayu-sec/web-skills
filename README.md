@@ -1,26 +1,27 @@
-# DySec Agent Skills
+# DayuSec Agent Skills
 
-DySec 团队共享的 Agent 协作规则与 Skills。
+DayuSec 团队共享的 Agent Skills。
 
-- [`AGENTS.md`](AGENTS.md)：全局规则、Skill 分层与组合边界。
+- [`AGENTS.md`](AGENTS.md)：本仓库的 Skill 维护规则。
 - `skills/<skill-name>/SKILL.md`：Skill 入口。
 - `skills/<skill-name>/references/`：按需读取的详细规范。
 
-项目仓库的 `AGENTS.md`、规格和源码始终优先于这里的全局约定。
+目标项目的 `AGENTS.md`、规格和源码始终优先于共享 Skill。
 
 ## Skills
 
 | 层级 | Skills |
 | --- | --- |
-| 基础通用 | `$dy-sec-code-commenting`、`$dy-sec-data-contract-first`、`$dy-sec-typescript`、`$dy-sec-rest-api` |
-| Web 共享 | `$dy-sec-frontend-shared`、`$dy-sec-frontend-request`、`$dy-sec-frontend-mock`、`$dy-sec-react`、`$dy-sec-antd-ui-components`、`$dy-sec-basic-ui` |
-| Web 架构扩展 | `$dy-sec-microfrontend` |
-| 后端技术 | `$dy-sec-java-spring` |
+| Web 公共约定 | `$dayu-sec-web-project-conventions` |
+| Web 架构扩展 | 单体 `$dayu-sec-web-monolith`；微前端 `$dayu-sec-web-micro-frontend` |
+| Web 任务能力 | `$dayu-sec-web-request`、`$dayu-sec-web-mock`、`$dayu-sec-react`、`$dayu-sec-antd-ui-components`、`$dayu-sec-basic-ui` |
+| 基础通用 | `$dayu-sec-code-commenting`、`$dayu-sec-data-contract-first`、`$dayu-sec-typescript`、`$dayu-sec-rest-api` |
+| 后端技术 | `$dayu-sec-java-spring` |
 
-Skills 位于 `$HOME/.agents/skills`。Agent 会按任务选择最小组合，也可以显式调用：
+Web 项目先使用 `$dayu-sec-web-project-conventions` 确认边界，再选择一个架构扩展并按任务追加最小能力组合：
 
 ```text
-使用 $dy-sec-basic-ui 设计并评审这个 React 页面。
+使用 $dayu-sec-web-project-conventions 和 $dayu-sec-web-monolith 评审这个单体 React 页面。
 ```
 
 ## 维护

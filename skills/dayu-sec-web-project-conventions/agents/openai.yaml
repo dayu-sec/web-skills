@@ -1,0 +1,4 @@
+interface:
+  display_name: "DayuSec Web 项目约定"
+  short_description: "统一 Web 项目发现、源码结构、命名和 Skill 组合"
+  default_prompt: "使用 $dayu-sec-web-project-conventions 识别当前 Web 项目边界，并按团队源码结构、命名和 Skill 组合约定完成任务。"

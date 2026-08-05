@@ -1,4 +1,0 @@
-interface:
-  display_name: "DySec 前端 Mock"
-  short_description: "根据 OpenAPI SDK 或文档生成并验证前端本地 Mock"
-  default_prompt: "使用 $dy-sec-frontend-mock 根据 OpenAPI SDK 或文档契约规划、实现并验证前端本地 Mock。"
