@@ -8,7 +8,7 @@
 
 ## 何时引入 resolver
 
-- 模板明确以 React Hook Form + Zod 作为业务表单基线，并提供真实可运行的表单入口时，直接声明 `react-hook-form`、`zod` 和 `@hookform/resolvers`，用 `zodResolver(schema)` 建立唯一校验链路。
+- 模板或目标项目明确以 React Hook Form + Zod 作为业务表单基线时，直接声明 `react-hook-form`、`zod` 和 `@hookform/resolvers`；没有真实表单时只提供依赖与契约，不初始化演示页面。业务落地后用 `zodResolver(schema)` 建立唯一校验链路。
 - 只有简单受控配置、搜索筛选或组件库自带表单已经满足需求时，不为了“未来可能使用”额外装配第二套状态引擎。
 - 存量 UI 库 Form 可以继续负责布局和字段呈现，但 Schema 校验只能有一个权威入口。不要同时维护 UI 库 rules 与 Zod 的重复业务规则。
 

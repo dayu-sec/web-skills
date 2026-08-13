@@ -1,4 +1,4 @@
 interface:
   display_name: "DayuSec shadcn/ui"
-  short_description: "规范 shadcn/ui、Tailwind CSS 与 Base UI 工程实现"
-  default_prompt: "使用 $dayu-sec-shadcn-ui 设计、实现或迁移一个源码自有的 shadcn/ui 基础层。"
+  short_description: "规范 shadcn/ui 组件选择、Monorepo 与 Tailwind 工程实现"
+  default_prompt: "使用 $dayu-sec-shadcn-ui 选择并实现项目自有的 shadcn/ui 基础组件与组合。"
