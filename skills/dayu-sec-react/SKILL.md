@@ -1,6 +1,6 @@
 ---
 name: dayu-sec-react
-description: 处理 React 前端代码的实现、重构与评审，覆盖依赖基线与选型、组件职责、Hooks library、状态管理、Ant Design 6.x 和 React Router 适配；适用于微前端与单体 Web 中的 `.tsx`、`.jsx`、React 路由和视图实现。
+description: 处理 React 前端代码的实现、重构与评审，覆盖依赖基线与选型、组件职责、Hooks library、状态管理、表单状态和 React Router 适配；适用于微前端与单体 Web 中的 `.tsx`、`.jsx`、React 路由和视图实现。
 ---
 
 # DayuSec React

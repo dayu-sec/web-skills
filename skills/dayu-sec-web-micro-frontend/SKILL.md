@@ -13,7 +13,7 @@ description: 处理 Web 微前端架构的设计、实现、迁移与评审，�
 4. 设计或评审职责、配置、依赖和通信时读取 [架构与所有权边界](references/architecture-boundaries.md)。
 5. 处理生命周期、路由、资源基址、独立运行或装配错误时读取 [运行时、路由与制品](references/runtime-routing-and-artifacts.md)。
 6. 处理布局、滚动、主题、样式、Portal 或集成验收时读取 [UI、主题隔离与验证](references/ui-theme-and-verification.md)。
-7. 按实际代码组合任务 Skill：React 使用 `$dayu-sec-react`，Ant Design 组件使用 `$dayu-sec-antd-ui-components`，基础 UI 与主题使用 `$dayu-sec-basic-ui`，数据请求使用 `$dayu-sec-web-request`，TypeScript 使用 `$dayu-sec-typescript`。
+7. 按实际代码组合任务 Skill：React 使用 `$dayu-sec-react`，shadcn/ui 与 Tailwind CSS 使用 `$dayu-sec-shadcn-ui`，基础视觉与主题使用 `$dayu-sec-basic-ui`，数据请求使用 `$dayu-sec-web-request`，TypeScript 使用 `$dayu-sec-typescript`。
 8. 同时验证子应用独立运行和宿主集成；修改生命周期或全局副作用时必须验证重复挂载与卸载清理。
 
 ## 分层边界

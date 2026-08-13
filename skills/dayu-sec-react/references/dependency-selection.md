@@ -14,13 +14,13 @@
 | 场景 | 选择 | 边界 |
 | --- | --- | --- |
 | React 组件、路由和表单 | React、React Router、项目已有表单方案 | 不用全局状态替代路由或表单状态 |
-| UI、主题和图标 | Ant Design、ProComponents、主题包、`lucide-react` | 组件选型使用 `$dayu-sec-antd-ui-components`，界面使用 `$dayu-sec-basic-ui` |
+| UI、主题和图标 | 项目自有 shadcn/ui 源码、Tailwind CSS、底层组件原语和 `lucide-react` | 工程实现使用 `$dayu-sec-shadcn-ui`，视觉语言使用 `$dayu-sec-basic-ui` |
 | 请求实例与业务 Service | `@dayu-sec/bizlib-request` | 不直接使用 `axios` 发起业务请求，使用 `$dayu-sec-web-request` |
 | 服务端状态 | `@tanstack/react-query` | 不存入 Zustand，不使用 `ahooks/useRequest` |
 | 运行时契约校验 | `zod` | 只校验不可信边界，使用 `$dayu-sec-data-contract-first` |
 | React 通用 Hooks | `ahooks` | 只处理浏览器、事件、调度和轻量状态辅助，使用 `$dayu-sec-react` |
 | 跨组件客户端状态 | `zustand`，必要时组合 `immer` | 不承载服务端缓存、URL 或普通表单状态 |
-| 国际化 | `i18next`、`react-i18next` 和项目语言资源 | 语言、Ant Design 与日期 locale 保持同一来源 |
+| 国际化 | `i18next`、`react-i18next` 和项目语言资源 | 语言、组件文案与日期 locale 保持同一来源 |
 | 日志 | 项目统一 logger | 不保留 `console.log`，不记录 Token 或敏感载荷 |
 | 可合并批请求 | `@seed-fe/batch-request` | 只用于接口明确支持且确有批量合并收益的场景 |
 
@@ -28,14 +28,14 @@
 
 | 依赖 | 合适场景 | 不要用于 |
 | --- | --- | --- |
-| `clsx` | 条件 class、CSS Modules 和外部 `className` 合并 | 替代 Design Token、Emotion 或组件状态建模 |
+| `clsx` | 条件 class、CSS Modules 和外部 `className` 合并；项目已有 `cn()` 时复用该入口 | 替代 Design Token 或组件状态建模 |
 | `dayjs` | 日期解析、格式化、比较、区间和 locale | 猜测接口时区或改变服务端时间契约 |
 | `change-case` | 展示名、非契约标识和显式命名转换 | 静默改写 API 字段、路由、权限键或持久化标识 |
 | `lodash-es` | 原生实现明显更难读的集合、对象和函数工具 | `Date.now()`、普通 `map`、简单空值判断等平台已有能力 |
 | `qs` | 接口契约要求嵌套对象、数组或特殊格式的 query 序列化 | 简单 URL 参数或 React Router 已负责的 search params |
 | `filesize` | 把字节数格式化为用户可读文本 | 修改底层数值、上传契约或限额判断单位 |
 | `dompurify` | 在渲染不可信 HTML 前执行净化 | 校验普通 JSON、纯文本或业务字段契约 |
-| `copy-to-clipboard` | 需要兼容降级且现有复制能力不足 | Ant Design `Typography` 可复制文本或原生 Clipboard API 已足够的场景 |
+| `copy-to-clipboard` | 需要兼容降级且现有复制能力不足 | 项目已有复制组件或原生 Clipboard API 已足够的场景 |
 | `immer` | 深层嵌套状态更新能显著降低不可变更新复杂度 | 简单对象、数组或为了与 Zustand 成套而默认启用 |
 
 使用工具前先确认输入和输出契约。工具只简化实现，不得发明字段、多结构 fallback、时区、单位、编码或安全语义。

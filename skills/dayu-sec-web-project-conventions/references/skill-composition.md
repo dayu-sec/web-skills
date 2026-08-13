@@ -15,7 +15,7 @@
 | React 组件、Hooks 和 Router 适配 | `$dayu-sec-react` |
 | 请求实例、SDK、Service 和错误传播 | `$dayu-sec-web-request` |
 | 本地 Mock、场景和契约来源 | `$dayu-sec-web-mock` |
-| Ant Design 组件选择与官方资料 | `$dayu-sec-antd-ui-components` |
+| shadcn/ui、Tailwind CSS、组件原语与表单 UI | `$dayu-sec-shadcn-ui` |
 | 基础 UI、主题、响应式与可访问性 | `$dayu-sec-basic-ui` |
 | TypeScript 类型、模块和声明 | `$dayu-sec-typescript` |
 | 运行时数据结构和 Schema | `$dayu-sec-data-contract-first` |
