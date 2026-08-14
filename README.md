@@ -14,7 +14,8 @@ DayuSec 团队共享的 Agent Skills。
 | --- | --- |
 | Web 公共约定 | `$dayu-sec-web-project-conventions` |
 | Web 架构扩展 | 单体 `$dayu-sec-web-monolith`；微前端 `$dayu-sec-web-micro-frontend` |
-| Web 任务能力 | `$dayu-sec-web-request`、`$dayu-sec-web-mock`、`$dayu-sec-react`、`$dayu-sec-shadcn-ui`、`$dayu-sec-basic-ui` |
+| Web 任务能力 | `$dayu-sec-web-request`、`$dayu-sec-web-mock`、`$dayu-sec-react` |
+| UI 产品与工程 | `$dayu-sec-ui-foundations`、`$dayu-sec-ui-internal-ops`、`$dayu-sec-ui-shadcn` |
 | 基础通用 | `$dayu-sec-code-commenting`、`$dayu-sec-data-contract-first`、`$dayu-sec-typescript`、`$dayu-sec-rest-api` |
 | 后端技术 | `$dayu-sec-java-spring` |
 

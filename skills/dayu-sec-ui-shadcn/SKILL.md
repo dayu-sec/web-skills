@@ -1,5 +1,5 @@
 ---
-name: dayu-sec-shadcn-ui
+name: dayu-sec-ui-shadcn
 description: 设计、选择、接入、实现、迁移或评审基于 shadcn/ui、Tailwind CSS 与底层无样式组件原语的项目自有 UI 基础层，覆盖单包或 pnpm Monorepo 中的 components.json 发现、CLI 工作流、组件选择与组合、主题 Token、表单校验、无障碍、存量组件库迁移和微前端样式隔离；适用于 React Web 项目中的基础组件、应用 Shell、主题样式和表单控件，不定义具体业务信息架构或品牌视觉。
 ---
 
@@ -20,7 +20,7 @@ description: 设计、选择、接入、实现、迁移或评审基于 shadcn/ui
 
 - shadcn/ui 是进入目标项目源码的组件模式，不是需要再包装成不可替换二次库的运行时依赖；生成后的源码由目标项目维护。
 - Monorepo 中的私有 UI workspace 仍属于当前项目源码，不自动成为跨仓库发布组件库；以目标项目的部署和所有权契约判断架构边界。
-- 品牌色、密度、排版和页面骨架使用 `$dayu-sec-basic-ui`；React 组件职责与 Hooks 使用 `$dayu-sec-react`；微前端生命周期与跨应用契约使用 `$dayu-sec-web-micro-frontend`。
+- 品牌色、密度、排版和页面骨架使用目标项目已确认的规范或对应产品 UI/UX Skill；内部运营和管理后台使用 `$dayu-sec-ui-internal-ops`。React 组件职责与 Hooks 使用 `$dayu-sec-react`；微前端生命周期与跨应用契约使用 `$dayu-sec-web-micro-frontend`。
 - 路由、权限、领域 Schema、业务文案和服务调用始终由目标项目定义。本 Skill 只负责 UI 基础设施及其组合契约。
 - 不固定依赖版本、base 预设或目录名；以目标仓库、当前 CLI 输出和已安装源码为准。
 

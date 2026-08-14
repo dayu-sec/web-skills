@@ -1,0 +1,4 @@
+interface:
+  display_name: "DayuSec UI 工程基础"
+  short_description: "协调跨产品 UI 的主题装配、布局状态与可访问性"
+  default_prompt: "使用 $dayu-sec-ui-foundations 在已有产品 UI/UX 规范下实现或评审跨产品共用的 UI 工程基础。"

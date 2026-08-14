@@ -14,7 +14,7 @@
 | 场景 | 选择 | 边界 |
 | --- | --- | --- |
 | React 组件、路由和表单 | React、React Router、项目已有表单方案 | 不用全局状态替代路由或表单状态 |
-| UI、主题和图标 | 项目自有 shadcn/ui 源码、Tailwind CSS、底层组件原语和 `lucide-react` | 工程实现使用 `$dayu-sec-shadcn-ui`，视觉语言使用 `$dayu-sec-basic-ui` |
+| UI、主题和图标 | 项目自有 shadcn/ui 源码、Tailwind CSS、底层组件原语和 `lucide-react` | 工程实现使用 `$dayu-sec-ui-shadcn`，视觉语言使用目标项目已确认规范或对应产品 UI/UX Skill |
 | 请求实例与业务 Service | `@dayu-sec/bizlib-request` | 不直接使用 `axios` 发起业务请求，使用 `$dayu-sec-web-request` |
 | 服务端状态 | `@tanstack/react-query` | 不存入 Zustand，不使用 `ahooks/useRequest` |
 | 运行时契约校验 | `zod` | 只校验不可信边界，使用 `$dayu-sec-data-contract-first` |
