@@ -18,7 +18,7 @@ description: 设计、选择、接入、实现、迁移或评审基于 shadcn/ui
 
 ## 职责边界
 
-- shadcn/ui 是进入目标项目源码的组件模式，不是需要再包装成不可替换二次库的运行时依赖；生成后的源码由目标项目维护。
+- packages/ui 中引入的社区组件视为只读物料，不改源码、不补兼容 Props、不包装成另一套本地组件库；生成与引入后的社区源码作为标准只读资产维护。
 - Monorepo 中的私有 UI workspace 仍属于当前项目源码，不自动成为跨仓库发布组件库；以目标项目的部署和所有权契约判断架构边界。
 - 品牌色、密度、排版和页面骨架使用目标项目已确认的规范或对应产品 UI/UX Skill；内部运营和管理后台使用 `$dayu-sec-ui-internal-ops`。React 组件职责与 Hooks 使用 `$dayu-sec-react`；微前端生命周期与跨应用契约使用 `$dayu-sec-web-micro-frontend`。
 - 路由、权限、领域 Schema、业务文案和服务调用始终由目标项目定义。本 Skill 只负责 UI 基础设施及其组合契约。
