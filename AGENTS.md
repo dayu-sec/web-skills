@@ -20,6 +20,7 @@
 - 使用 Skill Creator 创建或更新 Skill，并在完成后运行 Skill Creator 校验。
 - 团队标识为 `dayu-sec`；目录名、`SKILL.md` frontmatter `name` 和其他 Agent 配置中的机器名称统一使用 `dayu-sec-` 前缀。
 - Web 项目、架构和框架中立的应用内部工程机制使用 `dayu-sec-web-` 机器命名空间；React、Ant Design、TypeScript 等框架、组件库或语言 Skill 保留直接技术名称。正文和展示文案可以继续使用准确的“前端”和“微前端”术语。
+- UI Skill 使用 `dayu-sec-ui-` 机器命名空间并按层分段：跨产品工程基础不加层段；产品形态规范使用 `dayu-sec-ui-product-<形态>`；组件库与框架实现保留直接技术名称。
 - Skill 目录名必须与 frontmatter `name` 一致；`agents/openai.yaml` 的 `display_name` 以 `DayuSec` 开头，`default_prompt` 必须引用对应的 `$dayu-sec-*` 名称。
 - OpenAI 系统 Skill、插件 Skill、第三方 Skill 和其他外部维护资料不适用团队前缀规则。
 - `SKILL.md` 只保留触发范围、工作顺序、引用入口和输出要求；详细材料放入按需读取的一级 `references/`。

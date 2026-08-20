@@ -8,7 +8,7 @@ description: 处理 DayuSec Web 应用跨产品共用的 UI 工程基础与评�
 ## 工作顺序
 
 1. 读取目标仓库 `AGENTS.md`、已经确认的产品 UI/UX 规范、主题配置和组件入口，确认产品类型、真实业务边界与当前技术栈。
-2. 先选择对应产品 UI/UX 依据：内部运营、工作台和管理后台使用 `$dayu-sec-ui-internal-ops`；其他产品只使用目标仓库已确认的规范和实现，不从本 Skill 推断视觉方向。
+2. 先选择对应产品 UI/UX 依据：内部运营、工作台和管理后台使用 `$dayu-sec-ui-product-internal-ops`；面向客户和终端用户的客户端产品使用 `$dayu-sec-ui-product-client-facing`；其他产品只使用目标仓库已确认的规范和实现，不从本 Skill 推断视觉方向。
 3. 阅读 [跨产品 UI 工程基础](references/ui-engineering-foundations.md)，建立产品规范、语义 Token、组件库和页面实现之间的映射。
 4. 先复用目标项目的 Token 和基础组件，再新增缺失的工程角色；避免页面级字面量、无边界全局覆盖和重复主题来源。
 5. 目标项目采用 shadcn/ui 与 Tailwind CSS 时同时使用 `$dayu-sec-ui-shadcn`；采用其他组件库时遵循其项目约定或对应技术 Skill。

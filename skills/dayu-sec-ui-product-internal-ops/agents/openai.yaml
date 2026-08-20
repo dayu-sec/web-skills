@@ -1,4 +1,4 @@
 interface:
   display_name: "DayuSec 内部运营 UI"
   short_description: "规范内部运营与管理后台的任务流、交互模式和紧凑尺寸"
-  default_prompt: "使用 $dayu-sec-ui-internal-ops 设计、实现或评审一个高效、稳定、可访问的科技蓝内部运营后台。"
+  default_prompt: "使用 $dayu-sec-ui-product-internal-ops 设计、实现或评审一个高效、稳定、可访问的科技蓝内部运营后台。"

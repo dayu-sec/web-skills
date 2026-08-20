@@ -17,7 +17,8 @@
 | 本地 Mock、场景和契约来源 | `$dayu-sec-web-mock` |
 | shadcn/ui、Tailwind CSS、组件原语与表单 UI | `$dayu-sec-ui-shadcn` |
 | 已有产品规范下的 UI 工程基础、主题作用域、响应式与可访问性 | `$dayu-sec-ui-foundations` |
-| 内部运营、工作台和管理后台 UI/UX | `$dayu-sec-ui-internal-ops` |
+| 面向客户和终端用户的客户端产品 UI/UX | `$dayu-sec-ui-product-client-facing` |
+| 内部运营、工作台和管理后台 UI/UX | `$dayu-sec-ui-product-internal-ops` |
 | TypeScript 类型、模块和声明 | `$dayu-sec-typescript` |
 | 运行时数据结构和 Schema | `$dayu-sec-data-contract-first` |
 | REST 资源、HTTP 和 OpenAPI | `$dayu-sec-rest-api` |
