@@ -14,15 +14,21 @@
 
 ## 工具职责
 
-- TypeScript 编译器负责类型、模块解析和声明一致性。
-- typescript-eslint 负责 TypeScript AST 和需要类型信息的代码规则；类型信息来源沿用脚手架选择，不在普通源码任务中切换 parser 方案或共享 preset。
-- ESLint 负责代码质量和团队约定，不与 TypeScript 核心检查或格式化规则重复竞争。
-- Prettier 负责纯格式，不用格式差异表达类型或业务语义。
-- 优先运行仓库已有的统一质量门禁；没有统一入口时，只组合实际存在且与变更相关的检查。
+职责分四层，每层由谁承担以目标仓库的实际配置为准：
+
+- 类型层：编译器负责类型、模块解析和声明一致性。
+- 类型感知 Lint 层：负责必须拿到类型信息才能判定的规则；类型信息来源沿用脚手架选择，不在普通源码任务中切换类型服务方案或共享 preset。
+- 代码规范层：负责不依赖类型信息的代码质量和团队约定，不与类型层或格式层重复竞争同一个问题。
+- 格式层：负责纯格式，不用格式差异表达类型或业务语义。
+
+同一仓库的每一层只有一个所有者，规则写在该层自己的配置里，不并行维护两套等价规则集。导入顺序、类名顺序等确定性排序由代码规范层还是格式层承担取决于工具链，同样只能由其中一层承担。
+
+动手前先读目标仓库的 `AGENTS.md`、`package.json` 脚本和实际存在的工具配置，确认每层的所有者和统一入口命令，再决定检查与修复走哪条路径。优先运行仓库已有的统一质量门禁；没有统一入口时，只组合实际存在且与变更相关的检查。
 
 ## 反模式
 
 - 不只为匹配某个规范名称安装依赖、替换共享配置或迁移现有工具链。
+- 不按印象假设某一层由哪个具体工具承担；在读到仓库实际配置前不写规则、不加依赖、不建议迁移，也不把仓库已选定的工具改回更常见的那个。
 - 不为满足 JavaScript 风格规则而破坏正确的 TypeScript 类型、运行时或公共契约。
 - 不用 warning、批量 disable、关闭类型感知检查或扩大 ignore 范围掩盖错误。
 - 不把编译器错误、类型感知 Lint、普通代码规范和纯格式问题混为一谈。
@@ -31,4 +37,4 @@
 
 评审时先判断问题属于类型、运行时、代码规范还是格式，再按项目现有规则处理；必要禁用限制在最小范围并说明原因。
 
-参考依据：[Typed Linting](https://typescript-eslint.io/getting-started/typed-linting/)、[Shared Configs](https://typescript-eslint.io/users/configs/)、[Airbnb JavaScript Style Guide - Arrow Functions](https://github.com/airbnb/javascript#arrow-functions)。
+参考依据：[Typed Linting](https://typescript-eslint.io/getting-started/typed-linting/)（类型感知 Lint 的概念说明，不代表本文指定该实现）、[Airbnb JavaScript Style Guide - Arrow Functions](https://github.com/airbnb/javascript#arrow-functions)。
