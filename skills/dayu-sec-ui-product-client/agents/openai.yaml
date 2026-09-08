@@ -1,0 +1,4 @@
+interface:
+  display_name: "DayuSec 面向客户的产品 UI"
+  short_description: "规范面向客户的产品界面美学、材质层次、留白尺寸与动效"
+  default_prompt: "使用 $dayu-sec-ui-product-client 设计、实现或评审一个面向外部客户和终端用户、平静可信且可访问的科技蓝产品界面。"

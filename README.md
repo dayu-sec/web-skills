@@ -5,6 +5,7 @@ DayuSec 团队共享的 Agent Skills。
 - [`AGENTS.md`](AGENTS.md)：本仓库的 Skill 维护规则。
 - `skills/<skill-name>/SKILL.md`：Skill 入口。
 - `skills/<skill-name>/references/`：按需读取的详细规范。
+- `profiles/*.list`：按项目形态划分的安装组合，供安装器选择投放范围。
 
 目标项目的 `AGENTS.md`、规格和源码始终优先于共享 Skill。
 
@@ -15,7 +16,7 @@ DayuSec 团队共享的 Agent Skills。
 | Web 公共约定 | `$dayu-sec-web-project-conventions` |
 | Web 架构扩展 | 单体 `$dayu-sec-web-monolith`；微前端 `$dayu-sec-web-micro-frontend` |
 | Web 任务能力 | `$dayu-sec-web-request`、`$dayu-sec-web-mock`、`$dayu-sec-react` |
-| UI 产品与工程 | `$dayu-sec-ui-foundations`、`$dayu-sec-ui-product-client-facing`、`$dayu-sec-ui-product-internal-ops`、`$dayu-sec-ui-shadcn` |
+| UI 产品与工程 | `$dayu-sec-ui-foundations`、`$dayu-sec-ui-product-client`、`$dayu-sec-ui-product-internal`、`$dayu-sec-ui-shadcn` |
 | 基础通用 | `$dayu-sec-code-commenting`、`$dayu-sec-data-contract-first`、`$dayu-sec-typescript`、`$dayu-sec-rest-api` |
 | 后端技术 | `$dayu-sec-java-spring` |
 
@@ -24,6 +25,20 @@ Web 项目先使用 `$dayu-sec-web-project-conventions` 确认边界，再选择
 ```text
 使用 $dayu-sec-web-project-conventions 和 $dayu-sec-web-monolith 评审这个单体 React 页面。
 ```
+
+## 安装组合
+
+安装器按项目形态投放 Skill，组合定义在 `profiles/`：
+
+| 组合 | 适用形态 |
+| --- | --- |
+| `monolith` | 单体 Web 应用 |
+| `micro` | 微前端应用（宿主与子应用） |
+| `backend` | 后端服务（Java / Spring Boot） |
+| `ui-internal` | 内部产品 UI/UX (深度作业) |
+| `ui-client` | 面向客户的产品 UI/UX (轻量协同) |
+
+架构组合与 UI 组合按需叠加，例如单体内部产品选择 `monolith` 加 `ui-internal`。
 
 ## 维护
 

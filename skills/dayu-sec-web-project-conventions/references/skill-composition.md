@@ -17,8 +17,8 @@
 | 本地 Mock、场景和契约来源 | `$dayu-sec-web-mock` |
 | shadcn/ui、Tailwind CSS、组件原语与表单 UI | `$dayu-sec-ui-shadcn` |
 | 已有产品规范下的 UI 工程基础、主题作用域、响应式与可访问性 | `$dayu-sec-ui-foundations` |
-| 面向客户和终端用户的客户端产品 UI/UX | `$dayu-sec-ui-product-client-facing` |
-| 内部运营、工作台和管理后台 UI/UX | `$dayu-sec-ui-product-internal-ops` |
+| 面向客户和终端用户的产品 UI/UX | `$dayu-sec-ui-product-client` |
+| 内部产品、工作台和管理后台 UI/UX | `$dayu-sec-ui-product-internal` |
 | TypeScript 类型、模块和声明 | `$dayu-sec-typescript` |
 | 运行时数据结构和 Schema | `$dayu-sec-data-contract-first` |
 | REST 资源、HTTP 和 OpenAPI | `$dayu-sec-rest-api` |
@@ -29,8 +29,12 @@
 - 单体 React 页面：公共约定 + 单体架构 + React；请求、UI 和契约按实际任务追加。
 - 单体 Vue 页面：公共约定 + 单体架构；使用项目已有 Vue Skill 或框架约定，不加载 React。
 - 微前端宿主或子应用：公共约定 + 微前端；再按目标仓库的框架和职责追加。
-- 内部运营、工作台或管理后台页面：在实际架构和框架 Skill 之外追加内部运营 UI；跨产品 UI 工程基础、组件库、请求和数据契约仅按任务追加。
+- 内部产品、工作台或管理后台页面：在实际架构和框架 Skill 之外追加内部产品 UI；跨产品 UI 工程基础、组件库、请求和数据契约仅按任务追加。
 - 纯类型、纯组件、纯请求或纯数据契约任务：保留项目与架构边界，只加载直接相关的专用 Skill。
 - 单体迁移到微前端：公共约定 + 单体架构 + 微前端，分别说明迁移前后所有权和最小变更。
+
+## 安装边界
+
+本文列出的是团队 Skill 的完整职责划分，实际项目按形态只安装其中一部分。上述 Skill 以本项目实际安装为准：未安装即表示该职责不在本项目范围内，按目标仓库既有约定处理，不假设可以加载，也不因为本文提及就推断项目具备该形态。
 
 项目 `AGENTS.md`、清单和源码始终优先。发现不同 Skill 对同一职责给出冲突规则时，先回到职责所有者，不通过同时保留两套实现制造兼容分支。
