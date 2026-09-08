@@ -19,9 +19,11 @@
 | 文件与附件展示 | Attachment；文件选择、上传和持久化由业务层负责 |
 | 数据与摘要展示 | Table、Card、Item、Badge、Avatar；图表先检查项目既有图表栈 |
 | 页面与层级导航 | Breadcrumb、Tabs、Pagination、NavigationMenu、Sidebar |
+| 分段控制器（一条横条内多选一） | Tabs 默认变体；antd Segmented 的对应形态 |
 | 模态、侧边和确认流程 | Dialog、Sheet、Drawer、AlertDialog |
 | 轻量补充信息 | Tooltip、HoverCard、Popover |
-| 加载、进度、空和错误反馈 | Spinner、Skeleton、Progress、Empty、Alert、Toast |
+| 加载、进度、空和错误反馈 | Spinner、Skeleton、Progress、Empty、Alert |
+| 全局瞬时提示 | 目标仓库已安装的唯一 toast 实现 |
 | 内容分组与可调整布局 | Accordion、Collapsible、Separator、ScrollArea、Resizable |
 | 菜单与命令入口 | DropdownMenu、ContextMenu、Menubar、Command |
 | 会话与消息 | MessageScroller、Message、Bubble、Marker |
@@ -36,3 +38,4 @@
 - Chart、Questionnaire、Message、MessageScroller、Bubble、Marker 等场景化组件不应作为脚手架基础快照的默认成员；只有真实业务交互成立时才按需添加，不为展示组件创建示例路由或 Provider。
 - Attachment 可作为通用附件展示基础组件，但不拥有文件选择、校验、上传、进度、重试、服务端文件标识、下载权限或持久化状态。
 - 添加 Chart 前先检查项目是否已有 ECharts、Recharts 或其他图表栈，不为统一外观引入第二套图表运行时；Questionnaire 不替代通用表单状态、Schema 和提交契约。
+- 全局提示一个项目只保留一套实现。
