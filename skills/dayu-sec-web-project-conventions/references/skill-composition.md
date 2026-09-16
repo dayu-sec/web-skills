@@ -15,6 +15,7 @@
 | React 组件、Hooks 和 Router 适配 | `$dayu-sec-react` |
 | 请求实例、SDK、Service 和错误传播 | `$dayu-sec-web-request` |
 | 本地 Mock、场景和契约来源 | `$dayu-sec-web-mock` |
+| 多语言文案的命名空间、粒度与一致性 | `$dayu-sec-web-i18n` |
 | shadcn/ui、Tailwind CSS、组件原语与表单 UI | `$dayu-sec-ui-shadcn` |
 | 已有产品规范下的 UI 工程基础、主题作用域、响应式与可访问性 | `$dayu-sec-ui-foundations` |
 | 面向客户和终端用户的产品 UI/UX | `$dayu-sec-ui-product-client` |
