@@ -1,4 +1,4 @@
 interface:
-  display_name: "DayuSec Web 国际化文案组织"
-  short_description: "按业务领域划分命名空间与控制文案粒度"
-  default_prompt: "使用 $dayu-sec-web-i18n 按业务领域组织多语言文案的命名空间与粒度。"
+  display_name: "DayuSec Web 国际化文案"
+  short_description: "组织命名空间与粒度，分辨文案与数据，把中文接入多语言"
+  default_prompt: "使用 $dayu-sec-web-i18n 把界面文案接入多语言：划分命名空间、区分文案与数据、确认取值时机。"

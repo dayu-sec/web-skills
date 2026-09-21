@@ -6,6 +6,7 @@ dayu-sec-react
 dayu-sec-web-request
 dayu-sec-web-mock
 dayu-sec-web-i18n
+dayu-sec-web-testing
 dayu-sec-ui-foundations
 dayu-sec-ui-shadcn
 dayu-sec-data-contract-first
