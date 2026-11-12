@@ -8,7 +8,7 @@
 | 路径变量 | `snake_case` | `/{event_id}` |
 | Query 参数 | `snake_case` | `event_type` |
 | JSON 请求和响应字段 | `snake_case` | `created_at` |
-| 自定义动作 | 小写动词，复合词用连字符 | `:import-cancel` |
+| 自定义动作路径段 | 小写动词、`kebab-case` | `/cancel`、`/import-cancel` |
 
 - 代码内部继续遵循语言和仓库约定，例如 Java 使用 `camelCase`，在序列化和参数绑定边界显式映射线上名称。
 - 缩写按一个完整单词处理，避免 `sourceIP`、`userID` 等风格漂移；线上分别表达为 `source_ip`、`user_id`。

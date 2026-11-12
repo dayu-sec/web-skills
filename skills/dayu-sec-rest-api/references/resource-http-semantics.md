@@ -11,7 +11,10 @@
 通用 URL 形态：
 
 ```text
-/{prefix}/v{major}/{resources}/{resource_id}:{action}
+/{prefix}/v{major}/{resources}
+/{prefix}/v{major}/{resources}/{resource_id}
+/{prefix}/v{major}/{resources}/{action}
+/{prefix}/v{major}/{resources}/{resource_id}/{action}
 ```
 
 前缀和版本由目标仓库统一提供时，不在每个控制器重复硬编码。
@@ -35,16 +38,20 @@
 
 ## 自定义动作
 
-当操作无法自然表达为资源创建、替换、局部更新或删除时，才使用自定义动作：
+当操作无法自然表达为资源创建、替换、局部更新或删除时，使用末尾单个斜杠动作段表达自定义动作：
 
 ```http
-POST /jobs/{job_id}:cancel
-POST /devices/{device_id}:restart
+POST /jobs/{job_id}/cancel
+POST /devices/{device_id}/restart
+POST /coupons/redeem
+POST /profile/mfa/verify
 ```
 
-- 动作用小写动词；多个词使用连字符。
+- 按作用目标选用资源实例动作（`POST /{resources}/{resource_id}/{action}`）、资源集合动作（`POST /{resources}/{action}`）或单例资源动作（`POST /{singleton}/{action}`）。
+- 触发状态转移或副作用的自定义动作统一使用 `POST`；只读聚合或结构投影按名词子资源使用 `GET`（例如 `GET /orders/stats`），不用动词动作段。
+- 动作段固定为末尾单个小写动词或 `kebab-case` 字面量，在 OpenAPI 中逐个声明为独立静态路径，不把动作名参数化为 `/{action}` 路径变量，也不串联多层动词路径。
+- 集合动作 `/{resources}/{action}` 与资源详情 `/{resources}/{resource_id}` 并存时，保持 HTTP 方法正交（如 `POST` 动作配 `GET` 详情），或约束 `{resource_id}` 格式以排除保留动作词；在服务端路由与客户端动态路径匹配器中，静态动作路由均优先于参数路由声明。
 - 优先把长时间操作建模为操作资源，例如创建 `/operations` 后查询其状态。
-- 不使用 `/execute`、`/doSomething` 或多层动词路径逃避资源建模。
 - 可逆或撤销操作要单独定义语义、权限和幂等行为。
 
 ## 幂等与重试
